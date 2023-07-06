@@ -1,0 +1,20 @@
+[package]
+name = "ddd-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.19", features = ["serde"] }
+uuid = { version = "1.3.0", features = ["serde", "v4"] }
+tokio = { version = "1.26.0", features = ["full"] }
+sqlx = { version = "0.6.2", features = [
+    "runtime-tokio-rustls",
+    "postgres",
+    "chrono",
+    "uuid",
+] }
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = { version = "1.0.94" }
+axum = { version = "0.6.10" }
